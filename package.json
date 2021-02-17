@@ -1,0 +1,27 @@
+{
+  "name": "picji",
+  "version": "1.0.0",
+  "description": "😃 基选表情包 — 🙈 Home of Gay Memes 🌈💦💦💦",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1"
+  },
+  "devDependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Littlegolden/picji.git"
+  },
+  "author": "Golden",
+  "bugs": {
+    "url": "https://github.com/Littlegolden/picji/issues"
+  },
+  "homepage": "https://github.com/Littlegolden/picji#readme"
+}
