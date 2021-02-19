@@ -74,10 +74,8 @@ $(function() {
 
 	$.getJSON("js/tree.json", function(result) {
 		var each_count = 0;
-		var cdn = "https://cdn.jsdelivr.net/gh/picji/bbq2@master/";
+		var cdn = "https://picji.cn/bbq/";
 		$.each(result.data.reverse(), function(i, project) {
-			if(project.id <= 245)
-				cdn = "https://cdn.jsdelivr.net/gh/picji/bbq@master/";
 			$("div.projects").append(
 				'<div class="project" data-id="' + project.id + '"><a href="' + cdn +
 				project.path +

@@ -12,7 +12,7 @@ gulp.task("css", gulp.series(() => {
 		.pipe(gulp.dest('./dist/css'))
 	//        {compatibility: 'ie8'}  兼容ie8
 }));
-gulp.task('htmlmin', gulp.series(() => {
+gulp.task('html', gulp.series(() => {
 	var options = {
 		removeComments: true, //清除HTML注释
 		collapseWhitespace: true, //压缩HTML
@@ -27,7 +27,7 @@ gulp.task('htmlmin', gulp.series(() => {
 		.pipe(htmlmin(options))
 		.pipe(gulp.dest('./dist'));
 }));
-gulp.task('jsmin', gulp.series(() => {
+gulp.task('js', gulp.series(() => {
 	gulp.src('./js/*.js')
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/js'))
@@ -39,4 +39,4 @@ gulp.task('img', gulp.series(() => {
 }));
 
 //注册默认任务
-gulp.task('default', gulp.series("css", "htmlmin", "jsmin", "img"));
+gulp.task('default', gulp.series("css", "html", "js", "img"));
