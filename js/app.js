@@ -62,7 +62,7 @@ window.onload = function() {
 			}
 		})
 	}
-	$.getJSON("https://api.github.com/repos/picji/picji", function(result) {
+	$.getJSON("https://api.github.com/repos/picji/bbq2", function(result) {
 		var changeDate = result.updated_at;
 		var date = formatTime(changeDate, 'yyyy-MM-dd HH:mm:ss');
 		$("#update_time").text(date + ' CST');
@@ -74,8 +74,10 @@ $(function() {
 
 	$.getJSON("js/tree.json", function(result) {
 		var each_count = 0;
-		var cdn = "https://picji.cn/bbq/";
+		var cdn = "https://cdn.jsdelivr.net/gh/picji/bbq2@master/";
 		$.each(result.data.reverse(), function(i, project) {
+			if(project.id <= 245)
+				cdn = "https://cdn.jsdelivr.net/gh/picji/bbq@master/";
 			$("div.projects").append(
 				'<div class="project" data-id="' + project.id + '"><a href="' + cdn +
 				project.path +
